@@ -64,13 +64,13 @@ function checkIfPassed(score, totalScore) {
   return isPassed;
 }
 
-addNum(15, 5);
-subNum(25, 10);
-multiplyNum(30, 4);
-divideNum(120, 2);
-getCircleArea(16);
-getAverage(81, 79, 89, 85);
-checkIfPassed(8, 10);
+console.log(addNum(15, 5));
+console.log(subNum(25, 10));
+console.log(multiplyNum(30, 4));
+console.log(divideNum(120, 2));
+console.log(getCircleArea(16));
+console.log(getAverage(81, 79, 89, 85));
+console.log(checkIfPassed(8, 10));
 
 /* 
     8. Debug the following code to allow the functions to properly receive and return the correct values and mimic the output.
