@@ -29,3 +29,30 @@
 */
 
 console.log("Hello World!");
+
+function checkAverage(num1, num2, num3, num4) {
+  function average(num1, num2, num3, num4) {
+    return (num1 + num2 + num3 + num4) / 4;
+  }
+
+  let avg = average(num1, num2, num3, num4);
+  avg = Math.round(avg);
+
+  console.log("The average is " + avg);
+
+  if (avg <= 74) {
+    return `Hello, student, your average is ${avg}. The letter equivalent is F`;
+  } else if (avg <= 79) {
+    return `Hello, student, your average is ${avg}. The letter equivalent is D`;
+  } else if (avg <= 84) {
+    return `Hello, student, your average is ${avg}. The letter equivalent is C`;
+  } else if (avg <= 89) {
+    return `Hello, student, your average is ${avg}. The letter equivalent is B`;
+  } else if (avg <= 95) {
+    return `Hello, student, your average is ${avg}. The letter equivalent is A`;
+  } else {
+    return `Hello, student, your average is ${avg}. The letter equivalent is A+`;
+  }
+}
+
+console.log(checkAverage(90, 90, 90, 90));
