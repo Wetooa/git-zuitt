@@ -17,3 +17,24 @@ console.log("Hello World");
       - If it is, use the break statement to stop the loop.
   - Once the loop is complete, return the variable oddNumbers.
 */
+
+function printOddNumbers(number) {
+  let oddNumbers = "The odd numbers found are the following: ";
+
+  for (let i = 1; i <= number; i++) {
+    if (i % 2 === 0) {
+      continue;
+    }
+
+    console.log(`Continue and break: ${i}`);
+    oddNumbers += i + ", ";
+
+    if (i > 10) {
+      break;
+    }
+  }
+
+  return oddNumbers;
+}
+
+console.log(printOddNumbers(15));
