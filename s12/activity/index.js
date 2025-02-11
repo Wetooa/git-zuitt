@@ -1,9 +1,9 @@
 /*
-    2. Create a function called login which is able to receive 3 parameters called username,password and role.
+    2. Create a function called login which is able to receive 3 parameters called username, password, and role.
         - add an if statement to check if the username is an empty string or undefined or if the password is an empty string or undefined or if the role is an empty string or undefined.
         - if it is, return the following to inform the user that their input should not be empty:
         - "Inputs must not be empty"
-
+    
     3. Add an else statement to the if statement in the login function. Inside the else statement add a switch to check the user's role add 3 cases and a default:
         - Look up JS Switch Statements to be able to accomplish the output for this activity.
         - if the user's role is admin, return the following message:
@@ -17,6 +17,23 @@
         - Look up Switch Statements to be able to complete the output for this activity.
 */
 
+function login(username, password, role) {
+  if (!username || !password || !role) {
+    return "Inputs must not be empty";
+  } else {
+    switch (role) {
+      case "admin":
+        return "Welcome back to the class portal, admin!";
+      case "teacher":
+        return "Thank you for logging in, teacher!";
+      case "student":
+        return "Welcome to the class portal, student!";
+      default:
+        return "Role out of range.";
+    }
+  }
+}
+
 /*
     4.  Create a function `getSeason()` that returns the season based on the month.
         - Use a switch case statement.
@@ -25,3 +42,26 @@
         - Jun - Aug = Summer
         - Sep - Nov = Fall
 */
+
+function getSeason(month) {
+  switch (month) {
+    case "Dec":
+    case "Jan":
+    case "Feb":
+      return "Winter";
+    case "Mar":
+    case "Apr":
+    case "May":
+      return "Spring";
+    case "Jun":
+    case "Jul":
+    case "Aug":
+      return "Summer";
+    case "Sep":
+    case "Oct":
+    case "Nov":
+      return "Fall";
+    default:
+      return "Invalid month";
+  }
+}
