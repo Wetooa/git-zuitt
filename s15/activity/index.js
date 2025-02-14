@@ -14,11 +14,9 @@ console.log("Hello World");
         - return an array containing the received strings.
 */
 
-
-function createArray() {
-    
-};
-
+function createArray(string1, string2, string3, string4) {
+  return [string1, string2, string3, string4];
+}
 
 /*
     5. Create function which is able to display the length of a given array.
@@ -26,30 +24,32 @@ function createArray() {
         - Return the length of the array.
 */
 
-   
-function getArrayLength() {
-
+function getArrayLength(array) {
+  return array.length;
 }
-
 
 /*
     6. Identify and implement the best practices of creating and using arrays by avoiding errors and debugging the following codes. 
         - Log the values of each variable to follow/mimic the output.
 */
 
-
-let availableGames = ["Final Fantasy X","Last of Us","Resident Evil",true,{},["God of War","Ghost of Tsushima"]];
-let activeLocations = ["Manila""Tokyo""Washington, D.C.","Shanghai";];
-let employees = "John":"Dutch":"Arthur":"Hosea"];
-let sales = [250,"300",100,40,1300,{expenses: 2500}];
-
+let availableGames = [
+  "Final Fantasy X",
+  "Last of Us",
+  "Resident Evil",
+  "God of War",
+  "Ghost of Tsushima",
+];
+let activeLocations = ["Manila", "Tokyo", "Washington, D.C.", "Shanghai"];
+let employees = ["John", "Dutch", "Arthur", "Hosea"];
+let sales = [250, 300, 100, 40, 1300];
 
 /* Don't Modify. Used for Testing */
-console.log("These are our available games:")
+console.log("These are our available games:");
 console.log(availableGames);
-console.log("These are our active locations:")
+console.log("These are our active locations:");
 console.log(activeLocations);
-console.log("These are our active employees:")
+console.log("These are our active employees:");
 console.log(employees);
-console.log("These are our monthly sales:")
+console.log("These are our monthly sales:");
 console.log(sales);
