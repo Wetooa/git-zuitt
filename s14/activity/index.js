@@ -1,5 +1,4 @@
-
-// console.log("Hello World");
+console.log("Hello World");
 
 /* generateSalt() */
 /* 
@@ -16,12 +15,16 @@
       - Return the generated salt string
 */
 
-
-
-
-
-
-
+const characters =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+function generateSalt(number) {
+  let salt = "";
+  for (let i = 0; i < number; i++) {
+    let randomIndex = Math.floor(Math.random() * characters.length);
+    salt += characters[randomIndex];
+  }
+  return salt;
+}
 
 /* filterVowels() */
 /* 
@@ -35,13 +38,17 @@
 
 */
 
-
-
-
-
-
-
-
+function filterVowels(string) {
+  let filteredString = "";
+  for (let i = 0; i < string.length; i++) {
+    if (["a", "e", "i", "o", "u"].includes(string[i])) {
+      continue;
+    } else {
+      filteredString += string[i];
+    }
+  }
+  return filteredString;
+}
 
 /* countLetterAndStop */
 /* 
@@ -56,10 +63,17 @@
 
 */
 
-
-
-
-
+function countLetterAndStop(string) {
+  let letterACount = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === "a") {
+      letterACount++;
+    } else if (string[i] === "d") {
+      break;
+    }
+  }
+  return letterACount;
+}
 
 /* 
 	6. Debug the following code to allow the functions to properly receive and return the correct values and mimic the output.
@@ -70,68 +84,76 @@
     - Check the loop statements
 */
 
-function register(firstName,lastName,email,pw,confirmPassword,mobileNum,address,city,country){
-
+function register(
+  firstName,
+  lastName,
+  email,
+  password,
+  confirmPassword,
+  mobileNum,
+) {
   //returns messages if any of the parameters is not a string or is empty
 
-  if(typeof firstName !== "string" || firstName === ""){
+  if (typeof firstName !== "string" || firstName === "") {
     return "First name must be a string and not empty";
   }
 
-  if(typeof lastName !== "string" || lastName === ""){
+  if (typeof lastName !== "string" || lastName === "") {
     return "Last name must be a string and not empty";
   }
 
-  if(typeof email !== "string" || email === ""){
+  if (typeof email !== "string" || email === "") {
     return "Email must be a string and not empty";
   }
 
-  if(typeof password !== "string" || password === "") => {
+  if (typeof password !== "string" || password === "") {
     return "Password must be a string and not empty";
   }
 
-  if(typeOf confirmPassword !== "string" && confirmPassword === ""){
+  if (typeof confirmPassword !== "string" && confirmPassword === "") {
     return "Confirm password must be a string and not empty";
   }
 
-  if(typeof mobileNum !== "string" !! mobileNum === ""){
+  if (typeof mobileNum !== "string" || mobileNum === "") {
     return "Mobile number must be a string and not empty";
   }
 
-  //return message if mobileNum length is not equal to 11.
-  if(mobileNum.length !!== 11){
+  // return message if mobileNum length is not equal to 11.
+  if (mobileNum.length !== 11) {
     return "Mobile number must be 11 digits long";
   }
 
-  //return message if password and confirmPassword does not match
-  if(password = confirmPassword){
+  // return message if password and confirmPassword does not match
+  if (password !== confirmPassword) {
     return "Password and confirm password must match";
   }
 
   //return user object
   return {
-
     firstName: firstName,
     lastName: lastName,
     email: email,
     password: password,
-    mobileNum: mobileNo
-
-  }
+    mobileNum: mobileNum,
+  };
 }
 
-let newUser = register("Nayeon","Im","nayeonie@gmail.com","nayeonnie21","Nayeonnie21","+63251212401");
+let newUser = register(
+  "Nayeon",
+  "Im",
+  "nayeonie@gmail.com",
+  "nayeonnie21",
+  "nayeonnie21",
+  "09123456789",
+);
 console.log(newUser);
 
-
 function printPattern(rows) {
-  let pattern != "";
+  let pattern = "";
   for (let i = 0; i < rows; i++) {
-      pattern +== "*";
-      consolelog(pattern);
+    pattern += "*";
+    console.log(pattern);
   }
 }
 
 printPattern(10);
-
-
