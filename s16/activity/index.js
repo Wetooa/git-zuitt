@@ -4,8 +4,10 @@
 3. Copy the activity code and instructions from your Boodle Notes into your index.js.
 */
 
+console.log("Hello World");
+
 //Given array can be used for testing.
-let groceryList = ["Tomato Sauce","Pasta","Onion","Milk"]
+let groceryList = ["Tomato Sauce", "Pasta", "Onion", "Milk"];
 
 /*
     4. Create function which is able to receive an array and the index number of the item to be found, then return the found item.
@@ -14,9 +16,9 @@ let groceryList = ["Tomato Sauce","Pasta","Onion","Milk"]
         - if the item cannot be found, return undefined.
 */
 
-function getItemByIndex() {
-    
-};
+function getItemByIndex(array, index) {
+  return array[index];
+}
 
 /*
     5. Create function which is able to update a specific item in the given array by its index.
@@ -25,9 +27,9 @@ function getItemByIndex() {
         - Return the updated array.
 */
 
-   
-function updateItemByIndex() {
-
+function updateItemByIndex(array, value, index) {
+  array[index] = value;
+  return array;
 }
 
 /*
@@ -40,10 +42,14 @@ function updateItemByIndex() {
         - After the loop (outside of it), return true, indicating that all elements in the array are even numbers.
 */
 
-    function checkIfAllEven(arr) {
-
+function checkIfAllEven(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 !== 0) {
+      return false;
     }
-
+  }
+  return true;
+}
 
 /* 
 
@@ -59,19 +65,18 @@ function updateItemByIndex() {
     - Use the browser console to test your functions.
 */
 
-    function calculateTotal() => {
-        let total 0;
-        for (let i = 0; i <- arr.length;) {
-            arr +== arr[i];
-        }
-        return arr;
-    }
+function calculateTotal(array) {
+  let total = 0;
+  for (let i = 0; i <= array.length; i++) {
+    total += array[i];
+  }
+  return total;
+}
 
-    function calculateAverage(array) {
-        
-        for (let = 0; i < arr.length; i++) {
-            sum <= arr[i];
-        }
-
-        return sum / arr.length;
-    }
+function calculateAverage(array) {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum / array.length;
+}
