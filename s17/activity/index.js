@@ -7,12 +7,15 @@
 
 */
 
+console.log("Hello World");
+
 /*
     Create functions which can manipulate our arrays.
 */
 
 let registeredPlanets = ["Mercury", "Venus", "Earth", "Mars"];
 console.log(registeredPlanets);
+
 let registeredAstronomers = [];
 console.log(registeredAstronomers);
 
@@ -27,6 +30,18 @@ console.log(registeredAstronomers);
         - Invoke the function and pass the registeredPlanets and a planet as arguments
 */
 
+function addPlanet(array, planet) {
+  if (typeof planet === "string") {
+    array.push(planet);
+    return array;
+  } else {
+    return "Incorrect Input Type";
+  }
+}
+
+addPlanet(registeredPlanets, "Jupiter");
+console.log(registeredPlanets);
+
 /*
     3. Create a function called deletePlanet which will delete the last planet in the registeredPlanets array.
         - It will receive an array as parameter.
@@ -37,6 +52,17 @@ console.log(registeredAstronomers);
         - Invoke the function and pass the registeredPlanets array as an argument.
 */
 
+function deletePlanet(array) {
+  if (array.length > 0) {
+    array.pop();
+    return array;
+  } else {
+    return "No planets registered.";
+  }
+}
+deletePlanet(registeredPlanets);
+console.log(registeredPlanets);
+
 /*
     4. Create a function called returnNumberOfPlanets which will display the amount of registeredPlanets in our array,
         - It will receive an array as parameter
@@ -45,6 +71,17 @@ console.log(registeredAstronomers);
             - Else return a message: "No planets registered."
         - Invoke the function and pass the registeredPlanets array as an argument.
 */
+
+function returnNumberOfPlanets(array) {
+  if (array.length > 0) {
+    return array.length;
+  } else {
+    return "No planets registered.";
+  }
+}
+
+let numberOfPlanets = returnNumberOfPlanets(registeredPlanets);
+console.log(numberOfPlanets);
 
 /* 
     5. Create a function called unshiftPlanet which will add a planet in the registeredPlanets array using unshift().
@@ -57,6 +94,18 @@ console.log(registeredAstronomers);
         
 */
 
+function unshiftPlanet(array, planet) {
+  if (typeof planet === "string") {
+    array.unshift(planet);
+    return array;
+  } else {
+    return "Incorrect Input Type";
+  }
+}
+
+unshiftPlanet(registeredPlanets, "Jupiter");
+console.log(registeredPlanets);
+
 /* 
     6. Create a function called shiftPlanet which will delete a planet in the registeredPlanets array using shift().
         - It will receive an array as parameter
@@ -67,6 +116,18 @@ console.log(registeredAstronomers);
         - Invoke the function and pass the registeredPlanets array as an argument
 */
 
+function shiftPlanet(array) {
+  if (array.length > 0) {
+    array.shift();
+    return array;
+  } else {
+    return "No planets registered.";
+  }
+}
+
+shiftPlanet(registeredPlanets);
+console.log(registeredPlanets);
+
 /* 
     7. Create a function called splicePlanets which will replace 1 element in the registeredPlanets array with static values using splice().
         - It will receive an array, a planet and index as parameters
@@ -76,6 +137,18 @@ console.log(registeredAstronomers);
         - Else return "No planets registered"
         - Invoke the function and pass the registeredPlanets array and a planet as a parameter
 */
+
+function splicePlanets(array, planet, index) {
+  if (array.length > 0) {
+    array.splice(index, 1, planet);
+    return array;
+  } else {
+    return "No planets registered.";
+  }
+}
+
+splicePlanets(registeredPlanets, "Neptune", 2);
+console.log(registeredPlanets);
 
 /*
     8. Create a function called registerAstronomer.
@@ -98,6 +171,37 @@ console.log(registeredAstronomers);
         - Invoke the function and pass the appropriate parameters.
 */
 
+function registerAstronomer(array, name, address, age) {
+  if (typeof name !== "string") {
+    return "Incorrect Input Type";
+  }
+
+  if (typeof address !== "string") {
+    return "Incorrect Input Type";
+  }
+
+  if (typeof age !== "number") {
+    return "Incorrect Input Type";
+  }
+
+  let astronomer = {
+    astronomerName: name,
+    address: address,
+    age: age,
+  };
+
+  array.push(astronomer);
+  return array;
+}
+
+registerAstronomer(
+  registeredAstronomers,
+  "Adrian Sajulga",
+  "Minglanilla, Cebu",
+  20,
+);
+console.log(registeredAstronomers);
+
 /* 
     9. Create a function called deleteAstronomer which will delete the last registered astronomer
         - It will receive an array as parameter
@@ -106,3 +210,15 @@ console.log(registeredAstronomers);
             - Else return a message: "No astronomer registered."
         - Invoke the function and pass the registeredPlanets array as an argument.
 */
+
+function deleteAstronomer(array) {
+  if (array.length > 0) {
+    array.pop();
+    return array;
+  } else {
+    return "No astronomer registered.";
+  }
+}
+
+deleteAstronomer(registeredAstronomers);
+console.log(registeredAstronomers);
