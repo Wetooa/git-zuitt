@@ -1,4 +1,4 @@
-// console.log("Hello World");
+console.log("Hello World");
 
 /*
     1. In the s21 folder, create an activity folder, an index.html file inside of it and link the index.js file.
@@ -17,7 +17,14 @@
     - borrowedBooks => An empty array to store titles of books borrowed.
 */
 
-let userCard = {};
+let userCard = {
+  userId: "123",
+  name: "Adrian Sajulga",
+  age: 21,
+  address: "Minglanilla Cebu",
+  isActive: true,
+  borrowedBooks: [],
+};
 
 /*
 
@@ -31,6 +38,12 @@ let userCard = {};
 */
 
 let bookCard = {
+  bookId: "123",
+  title: "The Great Gatsby",
+  description: "A novel by American writer F. Scott Fitzgerald",
+  author: "F. Scott Fitzgerald",
+  yearPublished: "1925",
+  isAvailable: true,
   datesBorrowed: ["11-11-2021", "12-20-2021", "1-1-2023", "12-19-2024"],
 };
 
@@ -39,3 +52,6 @@ let bookCard = {
         - Update the bookCard by adding dates into the bookCard's datesBorrowed array.
         - Use array methods. Don't modify the original array.
 */
+
+bookCard.datesBorrowed.push("12-20-2025", "1-1-2026", "12-19-2027");
+console.log(bookCard);
