@@ -4,6 +4,8 @@
     3. Copy the activity code and instructions from your Instructor into your index.js.
 */
 
+console.log("Hello world!");
+
 /*
     Create functions which can manipulate our arrays.
 */
@@ -12,7 +14,9 @@
         - Use the forEach() method to print the square of each number on a new line.
 */
 
-function displayValues(values) {}
+function displayValues(values) {
+  values.forEach((num) => console.log(Math.pow(num, 3)));
+}
 
 /* Don't Modify For Testing*/
 console.log("Result of displayValues function");
@@ -25,7 +29,10 @@ displayValues([1, 2, 3, 4, 5]);
         - return the convertedArray variable.
 */
 
-function celsiusToFahrenheit() {}
+function celsiusToFahrenheit(temperatures) {
+  const convertedArray = temperatures.map((temp) => (temp * 9) / 5 + 32);
+  return convertedArray;
+}
 
 /* Don't Modify For Testing*/
 console.log("Result of celsiusToFahrenheit function");
@@ -38,7 +45,10 @@ console.log(celsiusToFahrenheit([10, 20, 30, 40, 50]));
 
 */
 
-function areAllEven() {}
+function areAllEven(numbers) {
+  const isEven = numbers.every((num) => num % 2 === 0);
+  return isEven;
+}
 
 /* Don't Modify For Testing*/
 console.log("Result of areAllEven function");
@@ -52,7 +62,10 @@ console.log(areAllEven([2, 4, 6, 8, 10]));
 
 */
 
-function hasDivisibleBy8() {}
+function hasDivisibleBy8(numbers) {
+  const hasDivisible = numbers.some((num) => num % 8 == 0);
+  return hasDivisible;
+}
 
 /* Don't Modify For Testing*/
 console.log("Result of hasDivisibleBy8 function");
