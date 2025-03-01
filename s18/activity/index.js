@@ -30,8 +30,11 @@ console.log("Hello World");
 let loot = ["gold", "silver", "bronze", "emerald", "diamond"];
 
 loot.sort();
+console.log(loot);
 loot.reverse();
+console.log(loot);
 loot.copyWithin(0, -2);
+console.log(loot);
 loot.fill("unknown", loot.length - 3);
 console.log(loot);
 
@@ -55,13 +58,13 @@ function returnEvenNumbers(arr) {
     return "The array is empty.";
   }
 
-  let isAllNumbers = arr.every((num) => typeof num === "Number");
+  let isAllNumbers = arr.every((num) => typeof num === "number");
 
   if (isAllNumbers === false) {
     return "The array does not contain all numbers.";
   }
 
-  let isAllPositiveIntegers = arr.some((num) => num > 0);
+  let isAllPositiveIntegers = arr.every((num) => num > 0);
 
   if (isAllPositiveIntegers === false) {
     return "The array does not contain all positive integers.";
@@ -70,11 +73,11 @@ function returnEvenNumbers(arr) {
   return arr.filter((num) => num % 2 === 0);
 }
 
-let messageIfEmptyArr = returnEvenNumbers(numbers);
+let messageIfEmptyArr = returnEvenNumbers([]);
 console.log("Message if the array is empty:");
 console.log(messageIfEmptyArr);
 
-let messageIfNotAllNumbers = returnEvenNumbers([1, 2, 3, 25, 4]);
+let messageIfNotAllNumbers = returnEvenNumbers([1, 2, 3, "25", 4]);
 console.log("Message if the array does not contain all number data type:");
 console.log(messageIfNotAllNumbers);
 
