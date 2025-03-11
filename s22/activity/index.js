@@ -1,4 +1,4 @@
-// console.log("Hello World");
+console.log("Hello World");
 
 /*
 1. In the S22 folder, create an activity folder and an index.html and index.js file inside of it.
@@ -33,7 +33,22 @@ INSTRUCTIONS:
 
 let adventurer = {
   // Properties
+  name: "Arin the Brave",
+  health: 100,
+  level: 10,
+  attack: 20,
+  inventory: [],
+
   // Method to attack a monster
+  attackMonster: function (monster) {
+    monster.health -= this.attack;
+
+    if (monster.health === 0) {
+      return `${this.name} attacks ${monster.name}! ${monster.name} has been defeated! ${monster.dropLoot(this)}`;
+    }
+
+    return `${this.name} attacks ${monster.name}! ${monster.name}'s health is now ${monster.health}`;
+  },
 };
 
 /**********************************************
@@ -58,10 +73,35 @@ INSTRUCTIONS:
     - Create a new instance for the monster (ex. Fenrir the Wolf, level 30, health 100, loot 'Wolf Fur')
 */
 
-function Monster() {
+function Monster(name, level, health, attack, loot) {
+  this.name = name;
+  this.level = level;
+  this.health = health;
+  this.attack = attack;
+  this.loot = loot;
+
   // Method for the monster to attack the target
+  this.attackTarget = function (character) {
+    character.health -= this.attack;
+
+    if (character.health === 0) {
+      return `${this.name} attacks ${character.name}! ${character.name} has been defeated!`;
+    }
+    return `${this.name} attacks ${character.name}! ${character.name}'s health is now ${character.health}`;
+  };
+
   // Method for the monster to drop loot when defeated
+  this.dropLoot = function (character) {
+    this.addToInventory(character.inventory, this.loot);
+    return `${this.name} drops ${this.loot}. ${character.name}'s inventory: ${character.inventory}`;
+  };
+
   // Add item to adventurer's inventory
+  this.addToInventory = function (inventory, item) {
+    inventory.push(item);
+  };
 }
 
 // Create a new instance for the monster (e.g., Fenrir the Wolf, level 30, health 100, loot 'Wolf Fur')
+
+const fenrir = new Monster("Fenrir the Wolf", 30, 100, 60, "Wolf Fur");
