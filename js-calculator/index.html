@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>JS Calculator</h1>
+    </header>
+
+    <main>
+      <div class="card">
+        <section class="grid grid-cols-2">
+          <input
+            type="number"
+            id="input-number-1"
+            placeholder="Enter first number"
+          />
+          <input
+            type="number"
+            id="input-number-2"
+            placeholder="Enter second number"
+          />
+        </section>
+
+        <section class="grid grid-cols-4">
+          <button class="btn-primary" id="btn-add">+</button>
+          <button class="btn-primary" id="btn-subtract">−</button>
+          <button class="btn-primary" id="btn-multiply">×</button>
+          <button class="btn-primary" id="btn-divide">÷</button>
+        </section>
+
+        <section class="flex">
+          <button class="btn-accent" id="btn-memory-add">M+</button>
+          <button class="btn-accent" id="btn-memory-recall">MR</button>
+          <button class="btn-accent" id="btn-memory-clear">MC</button>
+        </section>
+
+        <section class="result">
+          <h2>Result:</h2>
+          <div id="result-display">0</div>
+        </section>
+
+        <section class="history">
+          <h2>History</h2>
+          <ul id="history-list">
+            <li>No history yet.</li>
+          </ul>
+          <button id="btn-clear-history" class="btn-neutral">
+            Clear History
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Adrian Sajulga. All rights reserved.</p>
+      <p>Designed and developed with care.</p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
