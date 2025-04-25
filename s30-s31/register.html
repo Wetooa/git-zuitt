@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/register.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-title">🎬 Zuitt Movie Library</div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="form-container">
+        <h2>Register</h2>
+        <form id="registerForm" novalidate>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Email" />
+            <span class="error" id="emailError">Invalid email format.</span>
+          </div>
+
+          <div class="form-group">
+            <input type="password" id="password" placeholder="Password" />
+            <span class="error" id="passwordError"
+              >Password must be at least 8 characters.</span
+            >
+          </div>
+
+          <div class="form-group">
+            <input
+              type="password"
+              id="confirmPassword"
+              placeholder="Confirm Password"
+            />
+            <span class="error" id="confirmError">Passwords do not match.</span>
+          </div>
+
+          <div class="button-group">
+            <button type="submit">Register</button>
+            <button type="reset" class="reset-btn">Reset</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Zuitt Movie Library. All rights reserved.</p>
+    </footer>
+
+    <script src="js/register.js"></script>
+  </body>
+</html>
