@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Zuitt Movie Library</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Discover and manage your favorite movies with Zuitt Movie Library"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/landing.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-title">🎬 Zuitt Movie Library</div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+
+      <div class="nav-links">
+        <a href="movies.html">Movies</a>
+        <a href="landing.html" class="active">Home</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Discover Your Next Favorite Movie</h1>
+          <p>
+            Explore our curated collection of films from all genres. Create an
+            account to save your favorites and track what you've watched.
+          </p>
+          <div class="hero-buttons">
+            <a href="movies.html" class="btn btn-primary">Browse Movies</a>
+            <a href="register.html" class="btn btn-secondary">Sign Up Free</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img
+            src="./assets/movie-image/image1.jpg"
+            alt="Movie Collection"
+            class="landing-img"
+          />
+        </div>
+      </section>
+
+      <section class="features">
+        <h2>Why Choose Zuitt Movie Library?</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h3>Discover</h3>
+            <p>Find new and classic films across all genres</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">📋</div>
+            <h3>Track</h3>
+            <p>Keep a record of movies you've watched</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">❤️</div>
+            <h3>Save</h3>
+            <p>Create and manage your personal watchlist</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="movie-scroll">
+        <h2>Popular Highlights</h2>
+        <div class="scroll-container">
+          <div class="movie-scroll-card">
+            <img src="./assets/movie-image/image1.jpg" alt="Movie 1" />
+            <div class="movie-scroll-info">
+              <h3>Action Thriller</h3>
+              <p>Edge of your seat excitement</p>
+            </div>
+          </div>
+          <div class="movie-scroll-card">
+            <img src="./assets/movie-image/image2.jpg" alt="Movie 2" />
+            <div class="movie-scroll-info">
+              <h3>Sci-Fi Adventure</h3>
+              <p>Journey to new worlds</p>
+            </div>
+          </div>
+          <div class="movie-scroll-card">
+            <img src="./assets/movie-image/image3.jpg" alt="Movie 3" />
+            <div class="movie-scroll-info">
+              <h3>Comedy Classic</h3>
+              <p>Laugh out loud moments</p>
+            </div>
+          </div>
+          <div class="movie-scroll-card">
+            <img src="./assets/movie-image/image4.jpg" alt="Movie 4" />
+            <div class="movie-scroll-info">
+              <h3>Historical Drama</h3>
+              <p>Based on true events</p>
+            </div>
+          </div>
+          <div class="movie-scroll-card">
+            <img src="./assets/movie-image/image5.jpg" alt="Movie 5" />
+            <div class="movie-scroll-info">
+              <h3>Animated Feature</h3>
+              <p>Fun for all ages</p>
+            </div>
+          </div>
+          <div class="movie-scroll-card">
+            <img src="./assets/movie-image/image6.jpg" alt="Movie 6" />
+            <div class="movie-scroll-info">
+              <h3>Mystery Thriller</h3>
+              <p>Who did it?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <h2>Ready to start your movie journey?</h2>
+        <p>Join thousands of movie enthusiasts on Zuitt Movie Library</p>
+        <a href="register.html" class="btn btn-primary">Create Account</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Zuitt Movie Library</h3>
+          <p>Your personal movie collection manager</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: support@zuittmovies.com</p>
+          <p>Phone: (123) 456-7890</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Zuitt Movie Library. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/landing.js"></script>
+  </body>
+</html>

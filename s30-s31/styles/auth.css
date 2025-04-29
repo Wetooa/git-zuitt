@@ -1,0 +1,252 @@
+/* Authentication Pages (Login & Register) */
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+  flex-wrap: wrap;
+}
+
+.auth-welcome {
+  flex: 1;
+  min-width: 300px;
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-welcome h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.auth-welcome p {
+  margin-bottom: 30px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.auth-image {
+  width: 100%;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-top: 20px;
+}
+
+.form-container {
+  background: var(--card-bg);
+  padding: 30px 40px;
+  border-radius: var(--radius-lg);
+  max-width: 450px;
+  flex: 1;
+  min-width: 300px;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.form-subtitle {
+  text-align: center;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  cursor: pointer;
+}
+
+.toggle-password:hover {
+  color: var(--primary-color);
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+  padding: 12px 16px;
+  padding-right: 40px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  transition: border-color var(--transition-normal);
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+.error {
+  color: #dc2626;
+  display: none;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.remember-me input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+.forgot-password {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+  transition: color var(--transition-normal);
+}
+
+.forgot-password:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: var(--radius-sm);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  margin-top: 10px;
+}
+
+.btn-submit:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+}
+
+.form-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.form-footer a {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Form Validation Styles */
+input:invalid {
+  border: 1px solid #dc2626;
+  animation: shake 0.3s;
+}
+
+input:focus:invalid {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+/* Shake Animation */
+@keyframes shake {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+/* Password Strength Indicator */
+.password-strength {
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 2px;
+  transition: width var(--transition-normal);
+  background-color: #dc2626;
+}
+
+.weak {
+  width: 33%;
+  background-color: #dc2626;
+}
+
+.medium {
+  width: 66%;
+  background-color: #facc15;
+}
+
+.strong {
+  width: 100%;
+  background-color: #22c55e;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .auth-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .auth-welcome {
+    padding: 20px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  .form-options {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

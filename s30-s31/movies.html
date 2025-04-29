@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse our collection of movies at Zuitt Movie Library"
+    />
+    <title>Movies - Zuitt Movie Library</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/movies.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-title">🎬 Zuitt Movie Library</div>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+
+      <div class="nav-links">
+        <a href="movies.html" class="active">Movies</a>
+        <a href="landing.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="movie-hero">
+        <div class="movie-hero-content">
+          <h1>Explore Our Movie Collection</h1>
+          <p>
+            Find your next favorite film from our carefully curated selection
+          </p>
+        </div>
+      </section>
+
+      <section class="filter-section">
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Search movies..." />
+          <button id="searchBtn">🔍</button>
+        </div>
+
+        <div class="filter-controls">
+          <div class="filter-group">
+            <label for="genreFilter">Genre:</label>
+            <select id="genreFilter">
+              <option value="">All Genres</option>
+              <option value="Action">Action</option>
+              <option value="Comedy">Comedy</option>
+              <option value="Drama">Drama</option>
+              <option value="Sci-Fi">Sci-Fi</option>
+              <option value="Horror">Horror</option>
+              <option value="Romance">Romance</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="sortBy">Sort By:</label>
+            <select id="sortBy">
+              <option value="title-asc">Title (A-Z)</option>
+              <option value="title-desc">Title (Z-A)</option>
+              <option value="genre">Genre</option>
+            </select>
+          </div>
+
+          <button id="resetFilters" class="btn-reset">Reset Filters</button>
+        </div>
+      </section>
+
+      <section class="movie-library">
+        <h2>Movies Library</h2>
+        <div id="moviesContainer" class="movies-grid">
+          <!-- Loading spinner -->
+          <div id="loadingSpinner" class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Loading movies...</p>
+          </div>
+
+          <!-- Movies will be added here dynamically -->
+        </div>
+
+        <!-- No results message -->
+        <div id="noResults" class="no-results hidden">
+          <h3>No movies found</h3>
+          <p>Try adjusting your search or filters</p>
+        </div>
+      </section>
+
+      <div class="pagination">
+        <button id="prevPage" disabled>Previous</button>
+        <span id="currentPage">Page 1</span>
+        <button id="nextPage">Next</button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Zuitt Movie Library</h3>
+          <p>Your personal movie collection manager</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contact</h3>
+          <p>Email: support@zuittmovies.com</p>
+          <p>Phone: (123) 456-7890</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Zuitt Movie Library. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/movies.js"></script>
+  </body>
+</html>
